@@ -69,3 +69,15 @@ sed -i \
     -e 's/_ZN7qcamera17QCameraParameters21handleSuperResoultionEv/_ZN7qcamera17QCameraParameters21handleSuperResoultiSHIM/' \
     -e 's/_ZN7qcamera17QCameraParameters17isSuperResoultionEv/_ZN7qcamera17QCameraParameters17isSuperResoultiSHIM/' \
     "$CAMERA_HAL"
+
+function fix_radio_framework_path () {
+    sed -i \
+        's/\/system\/framework\//\/vendor\/framework\//g' \
+        "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/"$1"
+}
+
+fix_radio_framework_path /etc/permissions/embms.xml
+fix_radio_framework_path /etc/permissions/lpa.xml
+fix_radio_framework_path /etc/permissions/qcnvitems.xml
+fix_radio_framework_path /etc/permissions/qcrilhook.xml
+fix_radio_framework_path /etc/permissions/telephonyservice.xml
