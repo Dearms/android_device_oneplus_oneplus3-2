@@ -69,3 +69,15 @@ sed -i \
     -e 's/_ZN7qcamera17QCameraParameters21handleSuperResoultionEv/_ZN7qcamera17QCameraParameters21handleSuperResoultiSHIM/' \
     -e 's/_ZN7qcamera17QCameraParameters17isSuperResoultionEv/_ZN7qcamera17QCameraParameters17isSuperResoultiSHIM/' \
     "$CAMERA_HAL"
+
+function fix_vendor () {
+    sed -i \
+        "s/\/system\/$1\//\/vendor\/$1\//g" \
+        "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/"$2"
+}
+
+# Radio
+fix_vendor framework etc/permissions/embms.xml
+fix_vendor framework etc/permissions/qcnvitems.xml
+fix_vendor framework etc/permissions/qcrilhook.xml
+fix_vendor framework etc/permissions/telephonyservice.xml
