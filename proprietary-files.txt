@@ -320,8 +320,8 @@ vendor/lib64/libremosaic_tuning.so
 vendor/lib64/libremosaiclib.so
 
 # Camera / DSP - Hexagon libraries
-lib/rfsa/adsp/libmorpho_image_stabilizer4_hvx_skel.so
-lib/rfsa/adsp/libmorpho_video_denoiser_hvx_skel.so
+lib/rfsa/adsp/libmorpho_image_stabilizer4_hvx_skel.so:vendor/lib/rfsa/adsp/libmorpho_image_stabilizer4_hvx_skel.so
+lib/rfsa/adsp/libmorpho_video_denoiser_hvx_skel.so:vendor/lib/rfsa/adsp/libmorpho_video_denoiser_hvx_skel.so
 
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw:vendor/firmware/cpp_firmware_v1_1_1.fw
@@ -383,14 +383,14 @@ vendor/lib/libmmcamera_isp_sub_module.so
 -sbin/dashd;rootfs
 
 # Fingerprint sensor
-lib64/hw/fingerprint.msm8996.so
-lib64/lib_fpc_tac_shared.so
+lib64/hw/fingerprint.msm8996.so:vendor/lib64/hw/fingerprint.msm8996.so
+lib64/lib_fpc_tac_shared.so:vendor/lib64/lib_fpc_tac_shared.so
 
 # NFC firmware
 vendor/firmware/libpn548ad_fw.so
 
 # Radio - factory
-lib64/libparam.so
+lib64/libparam.so:vendor/lib64/libparam.so
 
 # Radio - MBN
 etc/firmware/mbn_ota/mcfg_sw_NoCDMA/mbn_ota.txt:vendor/firmware/mbn_ota/mcfg_sw_NoCDMA/mbn_ota.txt

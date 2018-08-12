@@ -77,7 +77,16 @@ function fix_vendor () {
 }
 
 # Radio
+fix_vendor framework etc/permissions/cneapiclient.xml
+fix_vendor framework etc/permissions/com.qti.dpmframework.xml
+fix_vendor framework etc/permissions/com.qti.location.sdk.xml
+fix_vendor framework etc/permissions/com.qti.snapdragon.sdk.display.xml
+fix_vendor framework etc/permissions/com.quicinc.cne.xml
+fix_vendor framework etc/permissions/dpmapi.xml
 fix_vendor framework etc/permissions/embms.xml
+fix_vendor framework etc/permissions/izat.xt.srv.xml
+fix_vendor framework etc/permissions/lpa.xml
 fix_vendor framework etc/permissions/qcnvitems.xml
 fix_vendor framework etc/permissions/qcrilhook.xml
+fix_vendor framework etc/permissions/qti_libpermissions.xml
 fix_vendor framework etc/permissions/telephonyservice.xml
